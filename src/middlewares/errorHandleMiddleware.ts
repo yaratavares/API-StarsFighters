@@ -24,6 +24,7 @@ export default function errorHandleMiddleware(
   res: Response,
   next: NextFunction
 ) {
+  console.log(err);
   if (err.type) {
     return res.sendStatus(serviceErrorToStatusCode[err.type]);
   }
